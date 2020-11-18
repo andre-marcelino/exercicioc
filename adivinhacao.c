@@ -19,15 +19,24 @@ int main() {
     int nivel;
     int totaldetentativas;
     int numerogrande = rand();
-    int numerosecreto = numerogrande % 100;
+    int numerosecreto;
     int chute;
     int acertou = 0;
+    int min = 0;
+    int max = 99;
     double pontos = 1000;
 
     printf("Qual o nivel de dificuldade?\n");
     printf("(1) Facil (2) Medio (3) Dificil\n\n");
     printf("Escolha: ");
     scanf("%d", &nivel);
+
+    printf("Escolha o range minimo: ");
+    scanf("%d", &min);
+    printf("Escolha o range maximo: ");
+    scanf("%d", &max);
+
+    numerosecreto = min + numerogrande % (max - min + 1);
 
 
    switch (nivel)
