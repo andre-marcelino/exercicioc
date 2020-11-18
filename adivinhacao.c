@@ -32,6 +32,7 @@ int main() {
         int acertou = 0;
         int min = 0;
         int max = 99;
+        int buffer;
         double pontos = PONTOS_INICIAL;
 
         printf("\nQual o nivel de dificuldade?\n");
@@ -74,6 +75,12 @@ int main() {
                 continue;
             }
 
+            if(buffer == chute) {
+                printf("Voce ja chutou esse numero. Escolha outro!\n");
+                i--;
+                continue;
+            }
+
             printf("Seu %do. chute foi %d\n", i, chute);
 
             acertou = chute == numerosecreto;
@@ -86,6 +93,8 @@ int main() {
                 } else {
                     printf("Seu chute foi menor do que o numero secreto!\n");
                 }
+            
+            buffer = chute;
 
 
             double pontosperdidos = abs(chute-numerosecreto)/2.0;
