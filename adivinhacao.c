@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define N_TENTATIVAS_FACIL 20
+#define N_TENTATIVAS_MEDIO 15
+#define N_TENTATIVAS_DIFICIL 6
+#define PONTOS_INICIAL 1000
 
 int main() {
     printf("\n\n");
@@ -24,7 +28,7 @@ int main() {
     int acertou = 0;
     int min = 0;
     int max = 99;
-    double pontos = 1000;
+    double pontos = PONTOS_INICIAL;
 
     printf("Qual o nivel de dificuldade?\n");
     printf("(1) Facil (2) Medio (3) Dificil\n\n");
@@ -42,15 +46,15 @@ int main() {
    switch (nivel)
    {
    case 1:
-       totaldetentativas = 20;
+       totaldetentativas = N_TENTATIVAS_FACIL;
        break;
 
     case 2:
-        totaldetentativas = 15;
+        totaldetentativas = N_TENTATIVAS_MEDIO;
         break;
     
    default:
-        totaldetentativas = 6; 
+        totaldetentativas = N_TENTATIVAS_DIFICIL; 
         break;
    }
 
