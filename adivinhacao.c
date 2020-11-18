@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-//#define NUMERO_DE_TENTATIVAS 3
 
 int main() {
     printf("\n\n");
@@ -23,49 +22,13 @@ int main() {
     int numerosecreto = numerogrande % 100;
     int chute;
     int acertou = 0;
-    //int tentativas = 1;
     double pontos = 1000;
-
-/*    for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++) {
-        printf("Qual e o seu %do. chute? ", i);
-        scanf("%d", &chute);
-        
-        if(chute < 0) {
-            printf("Voce nao pode chutar numeros negativos\n");
-            i--;
-            continue;
-        }
-
-        printf("Seu chute foi %d\n", chute);
-
-        int acertou = chute == numerosecreto;
-        int maior = chute > numerosecreto;
-
-        if (acertou) {
-            printf("Parabens! Voce acertou!\n");
-            break;
-        } else if (maior) {
-                printf("Seu chute foi maior do que o numero secreto!\n");
-            } else {
-                printf("Seu chute foi menor do que o numero secreto!\n");
-            }
-    }
-*/
 
     printf("Qual o nivel de dificuldade?\n");
     printf("(1) Facil (2) Medio (3) Dificil\n\n");
     printf("Escolha: ");
     scanf("%d", &nivel);
 
-    /*
-    if(nivel == 1) {
-        totaldetentativas = 20;
-    } else if (nivel == 2) {
-        totaldetentativas = 15;
-    } else {
-        totaldetentativas = 6;
-    }
-    */
 
    switch (nivel)
    {
